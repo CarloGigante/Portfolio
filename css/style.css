@@ -16,8 +16,7 @@
     color: var(--text-primary);
     font-family: 'Aclonica', sans-serif;
     font-size: 1.5rem;
-    font-weight: 700;
-    
+    font-weight: 700;   
 }
 #nav-color, #nav-active{
     color: var(--text-primary);
@@ -36,7 +35,6 @@ section{
     min-height: 100vh;
     padding: 6rem 8% 5rem;
 }
-
 .home-img img{
     width: 25%;
 }
@@ -71,7 +69,6 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 .social-media i{
     font-size: 26px;
