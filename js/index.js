@@ -1,4 +1,4 @@
-const textArray = ["Web Developer", "Designer", "Creative", "Lorenz"];
+const textArray = ["Web Developer", "Designer", "Creative"];
 const typingTexts = document.querySelectorAll(".typing-text");
 
 typingTexts.forEach((typingText, index) => {
