@@ -66,7 +66,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1000; /* Ensure it's above other elements */
+    z-index: 1000; 
 }
 .social-media {
     display: flex;
