@@ -18,7 +18,7 @@
 <body>
         <nav id="navigation" class="navbar navbar-expand-lg">
             <div class="container container-fluid">
-              <a id="nav-title" class="navbar-brand" href="#">
+              <a class="navbar-brand" href="#">
                 <img class="nav-logo" src="./img/logo.png" alt="logo">
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav justify-content-end flex-grow-1">
                   <li class="nav-item">
-                    <a id="nav-active" class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a id="nav-active" class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
                     <a id="nav-color" class="nav-link" href="#portfolio">Portfolio</a>
@@ -36,7 +36,7 @@
                     <a id="nav-color" class="nav-link" href="#services">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a id="nav-color" class="nav-link" href="#">About</a>
+                    <a id="nav-color" class="nav-link" href="#about">About</a>
                   </li>
                 </ul>
               </div>
@@ -61,7 +61,7 @@
                           </div>
                         </div>
                         <a class="btn btn-light btn-lg hero-btn-1" href="CarloResume.pdf" download="carlogigante-cv" role="button">Download Resume</a>
-                        <a class="btn btn-outline-light btn-lg hero-btn-r" role="button">Learn More</a>
+                        <a class="btn btn-outline-light btn-lg hero-btn-r" href="#about" role="button">Learn More</a>
                     </div>
                     <div class="col-12 col-md-6">
                       <img class="picture" src="./img/Visual.svg" alt="hero-img">
@@ -77,6 +77,9 @@
           <hr class="portfolio-hr">
           <div class="row row-fix">
             <div class="col-12 col-md-6">
+              <img class="s-img p-img1" src="./img/portfolio/portfolio1.png" alt="portfolio">
+            </div>
+            <div class="col-12 col-md-6 text-center">
               <h2 class="p-heading">Portfolio #1</h2>
               <p class="p-title p-text-3">Take a look at some of my completed web development projects. A collection of Responsive Websites.
               <a href="https://carlogigante.github.io/activity3/" target="block" class="btn btn-link p-link">Click here
@@ -85,23 +88,12 @@
             </p>
             </div>
             <div class="col-12 col-md-6">
-              <img class="s-img p-img1" src="./img/portfolio/portfolio1.png" alt="portfolio">
-            </div>
-            <div class="col-12 col-md-6">
-              <h2 class="p-heading">Portfolio #2</h2>
-              <p class="p-title p-text-2">Take another look at some of my completed web design projects. A collection of designs for desktop and mobile websites.
-              <a href="https://carlogigante.github.io/Portfolio/" target="block" class="btn btn-link p-link">Click here
-              <i class="fa-solid fa-1x fa-up-right-from-square"></i>
-              </a>
-              </p>
-            </div>
-            <div class="col-12 col-md-6">
               <img class="s-img p-img2" src="./img/portfolio/portfolio2.png" alt="portfolio">
             </div>
-            <div class="col-12 col-md-6">
-              <h2 class="p-heading">Portfolio #3</h2>
-              <p class="p-title p-text-3">Lets have a look at my published blog posts. It's all about optimizing and speeding up the performance of your website in a short period of time.
-              <a href="hhttps://carlogigante.github.io/SEActivity3/activity3/" target="block" class="btn btn-link p-link">Click here
+            <div class="col-12 col-md-6 text-center">
+              <h2 class="p-heading">Portfolio #2</h2>
+              <p class="p-title p-text-3">Take another look at some of my completed web design projects. A collection of designs for desktop and mobile websites.
+              <a href="https://carlogigante.github.io/Portfolio/" target="block" class="btn btn-link p-link">Click here
               <i class="fa-solid fa-1x fa-up-right-from-square"></i>
               </a>
               </p>
@@ -109,12 +101,20 @@
             <div class="col-12 col-md-6">
               <img class="s-img p-img3" src="./img/portfolio/portfolio3.png" alt="portfolio">
             </div>
+            <div class="col-12 col-md-6 text-center">
+              <h2 class="p-heading">Portfolio #3</h2>
+              <p class="p-title p-text-3">Lets have a look at my published blog posts. It's all about optimizing and speeding up the performance of your website in a short period of time.
+              <a href="hhttps://carlogigante.github.io/SEActivity3/activity3/" target="block" class="btn btn-link p-link">Click here
+              <i class="fa-solid fa-1x fa-up-right-from-square"></i>
+              </a>
+              </p>
+            </div>
           </div>
           </div>
         </section>
 
-          <section id="certificate" class="container-fluid certificate-section">
-            <div class="certificate-container">
+          <section id="certificate" class="certificate-section">
+            <div class="container-fluid">
               <h5 class="portfolio-h5">Achievements</h5>
               <h1 class="portfolio-h1">Certificates</h1>
               <div class="row rev-cert cert1">
@@ -153,12 +153,80 @@
           </section>
 
       <section id="services" class="services-section">
-        <div>
+        <div class="container-fluid">
           <h5 class="portfolio-h5">Services</h5>
-          <h1 class="portfolio-h1">Skills</h1>
+          <h1 class="portfolio-h1">How i help</h1>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 text-center">
+              <div class="card">
+                <div class="card-body">
+                  <span class="s-icon bg-warning">
+                    <i class="fa-solid fa-code"></i>
+                  </span>
+                  <h5 class="card-title">Web development</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center">
+            <div class="card">
+              <div class="card-body">
+                <span class="s-icon bg-primary">
+                  <i class="fa-solid fa-pen-ruler"></i>
+                </span>
+                <h5 class="card-title">ui/ux design</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="card">
+            <div class="card-body">
+              <span class="s-icon bg-danger">
+                <i class="fa-solid fa-network-wired"></i>
+              </span>
+              <h5 class="card-title">Networking</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+      </div>
+        </div>
         </div>
       </section>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+      <section id="skills" class="skills-section">
+       <div class="container-fluid">
+      <h5 class="portfolio-h5">Skills</h5>
+       <h1 class="portfolio-h1">My Skills</h1>
+       </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="container-fluid">
+          <h5 class="about-h5">Carlo Cabalog Gigante</h5>
+          <h1 class="about-h1">About me</h1>
+          <div class="row">
+
+
+          </div>
+        </div>
+
+      </section>
+
+      <section id="cta" class="cta-section">
+
+      </section>
+
+      <footer class="f-container">
+        <section id="footer" class="container-fluid">
+          <div class="row">
+
+          </div>
+
+        </section>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       <script src="./js/index.js"></script>
 </body>
 </html>
