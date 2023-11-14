@@ -8,26 +8,26 @@
     --primary-color: #B6FFFA;
     --secondary-color: black;
     --text-primary: white;
+    --card-color: #07182E;
     --title-color: #00A9FF;
     --hover-color: #A9C1C9;
+    --font-style: 'Aclonica', sans-serif;
+    --font-style1:'Bebas Neue', cursive;
+    --font-style2:'Roboto', sans-serif;
 }
 #navigation{
-    background-color: #00A9FF;
+    background-color: var(--title-color);
     position: fixed;
     padding: 10px;
     z-index: 1000; 
     width: 100%;
 }
 .home-section, .portfolio-section, .certificate-section,
-.services-section{
+.services-section, .skills-section, .about-section, .cta-section{
     background-color: var(--secondary-color);
 }
-#nav-title{
-    color: var(--text-primary);
-    font-family: 'Aclonica', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    
+.portfolio-h5,.portfolio-h1, .p-heading, .about-h1,.about-h5{
+    font-family: var(--font-style1)
 }
 #nav-color, #nav-active{
     color: var(--text-primary);
@@ -43,7 +43,7 @@
    width: 50%;
 }
 section{
-    min-height: 100vh;
+    min-height: 100%;
     padding: 6rem 8% 5rem;
 }
 
@@ -129,7 +129,7 @@ section{
     overflow: hidden;
     margin: 0;
     animation: typing 5s steps(40, end) infinite, text-type 0.75s step-start infinite;
-    color: #B6FFFA;
+    color: var(--primary-color);
 }
 
 @keyframes typing {
@@ -146,7 +146,7 @@ section{
         border-color: transparent;
     }
     50% {
-        border-color: #00A9FF;
+        border-color: var(--title-color);
     }
 }
 
@@ -154,7 +154,6 @@ section{
 
 .portfolio-h5{
     color: var(--primary-color);
-    font-family: 'Bebas Neue', cursive;
     font-size: 1.25rem;
     text-align: center;
     margin-bottom: 0;
@@ -162,7 +161,6 @@ section{
 }
 .portfolio-h1{
     color: var(--primary-color);
-    font-family: 'Bebas Neue', cursive;
     font-size: 52px;
     text-align: center;
     margin-bottom: 3%;
@@ -174,18 +172,17 @@ section{
 .p-heading{
     font-size: 42px;
     color: var(--primary-color);
-    font-family: 'Bebas Neue', cursive;
 }
 p{
     line-height: 30px;
     font-size: 18px;
 }
 .p-title{
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-style2);
     color: var(--text-primary);
 }
 .p-text-1, .p-text-2, .p-text-3{
-    padding-right: 25%;
+    padding: 0 5% 0 5%;
 }
 .row-fix{
     align-items: center;
@@ -195,7 +192,7 @@ p{
     width: 75%;
 }
 .p-img1, .p-img2, .p-img3{
-    float: right;
+    float: left;
 }
 a.p-link{
     color: var(--title-color);
@@ -220,7 +217,7 @@ a.p-link:hover{
 .certi-img:hover{
     position: relative;
     z-index: 1;
-    transform:scale(2.5);
+    transform:scale(2.7);
 }
 .certificate-img {
     margin: 0 0 3% 2.4%;
@@ -235,3 +232,85 @@ a.p-link:hover{
 .c-img1, .c-img5,.c-img6, .c-img10{
     margin-top: 15%;
 }
+
+/*Service Section*/
+.card {
+    width: 22rem!important;
+    height: 28rem!important;
+    background: var(--card-color)!important;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.card-body{
+    padding: 2rem!important;
+    z-index: 2;
+}
+.s-icon{
+    color:var(--text-primary);
+    font-size: 3em;
+}
+  .card-title{
+    font-size: 35px;
+    margin-top: 1rem;
+    font-family: var(--font-style1);
+    color: var(--primary-color);
+  }
+  .card-text{
+    color: var(--text-primary);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    align-items: center;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+    border-radius: 15px;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: var(--card-color);
+    inset: 5px;
+    border-radius: 15px;
+    z-index: 1;
+  }  
+  .card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+  }
+  
+  /*About Section*/
+  .about-h5{
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    opacity: .5;
+  }
+  .about-h1{
+    color: var(--primary-color);
+    font-size: 52px;
+    margin-bottom: 3%;
+  }
+  /*Footer Section*/
+  .f-container{
+    background: var(--title-color);
+    color: var(--text-primary);
+  }
