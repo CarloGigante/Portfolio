@@ -232,7 +232,6 @@ a.p-link:hover{
 .c-img1, .c-img5,.c-img6, .c-img10{
     margin-top: 15%;
 }
-
 /*Service Section*/
 .card {
     width: 22rem!important;
@@ -296,7 +295,12 @@ a.p-link:hover{
     background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
     animation: rotBGimg 3.5s linear infinite;
   }
-  
+  /* Skill Section*/
+  .skill-title{
+    color: var(--primary-color);
+    font-family: var(--font-style1);
+    font-size: 20px;
+  }
   /*About Section*/
   .about-h5{
     color: var(--primary-color);
