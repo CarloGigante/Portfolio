@@ -22,7 +22,7 @@
     z-index: 1000; 
     width: 100%;
 }
-.home-section, .portfolio-section, .certificate-section,
+.home-section, .portfolio-section,.certificate-section,
 .services-section, .skills-section, .about-section, .cta-section{
     background-color: var(--secondary-color);
 }
@@ -34,9 +34,8 @@
     margin-left: 2rem;
     font-size: 16px;
     font-weight: 500;
-    transition: .3s;
 }
-#navbarNav :hover, #nav-active{
+#navbarNav:hover, #nav-active{
     color: var(--primary-color);
 }
 .nav-logo{
@@ -46,28 +45,30 @@ section{
     min-height: 100%;
     padding: 6rem 8% 5rem;
 }
-
-.home-img img{
-    width: 25%;
-}
 .home-content h3{
     color: var(--text-primary);
     font-size: 30px;
     font-weight: 700;
 }
-.home-content h3:nth-of-type(2){
+.home-content h3{
     margin-bottom: 1rem;
 }
 .home-content h1{
-    color: var(--text-primary);
+    color: var(--title-color);
+    font-family: var(--font-style);
     font-weight:700;
     font-size: 50px;
     line-height: 1.3;
 }
-.home-content p{
+.home-content p,.p-title{
+    font-family: var(--font-style2);
     color: var(--text-primary);
 }
-.side-panel {
+p{
+    line-height: 30px;
+    font-size: 18px;
+}
+.side-panel{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -80,8 +81,7 @@ section{
 .social-media {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;   
 }
 .social-media i{
     font-size: 26px;
@@ -104,6 +104,9 @@ section{
     background: var(--secondary-color);
     color: var(--title-color);
     box-shadow: 0 0 1.1rem var(--text-primary);
+}
+.hero-buttons{
+    font-family: var(--font-style2);
 }
 .hero-btn-1{
     margin-right: 10px!important;
@@ -131,7 +134,6 @@ section{
     animation: typing 5s steps(40, end) infinite, text-type 0.75s step-start infinite;
     color: var(--primary-color);
 }
-
 @keyframes typing {
     from {
         width: 0;
@@ -140,7 +142,6 @@ section{
         width: 100%;
     }
 }
-
 @keyframes text-type {
     from, to {
         border-color: transparent;
@@ -149,9 +150,7 @@ section{
         border-color: var(--title-color);
     }
 }
-
-/* portfolio Section */
-
+/* Portfolio Section */
 .portfolio-h5{
     color: var(--primary-color);
     font-size: 1.25rem;
@@ -172,14 +171,6 @@ section{
 .p-heading{
     font-size: 42px;
     color: var(--primary-color);
-}
-p{
-    line-height: 30px;
-    font-size: 18px;
-}
-.p-title{
-    font-family: var(--font-style2);
-    color: var(--text-primary);
 }
 .p-text-1, .p-text-2, .p-text-3{
     padding: 0 5% 0 5%;
@@ -208,11 +199,10 @@ a.p-link:hover{
 }
 /* Certificate Section */
 .certi-img {
-    display: block;
+    display: inline-flex;
     margin-left: auto;
     margin-right: auto;
     transition: all .5s ease;
-    align-items: center
 }
 .certi-img:hover{
     position: relative;
@@ -220,10 +210,10 @@ a.p-link:hover{
     transform:scale(2.7);
 }
 .certificate-img {
-    margin: 0 0 3% 2.4%;
+    margin: 0 0 2% 2.5%;
 }
 .certi-img {
-    width: 90%;
+    width: 80%;
     box-shadow: 0 0 1.1rem var(--text-primary);
 }
 .c-img3,.c-img8{
@@ -235,14 +225,14 @@ a.p-link:hover{
 /*Service Section*/
 .card {
     width: 22rem!important;
-    height: 28rem!important;
+    height: 26rem!important;
     background: var(--card-color)!important;
-    position: relative;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    overflow: hidden;
-    border-radius: 20px;
+    position: relative!important;
+    display: flex!important;
+    place-content: center!important;
+    place-items: center!important;
+    overflow: hidden!important;
+    border-radius: 20px!important;
 }
 .card-body{
     padding: 2rem!important;
@@ -252,16 +242,16 @@ a.p-link:hover{
     color:var(--text-primary);
     font-size: 3em;
 }
-  .card-title{
+.card-title{
     font-size: 35px;
     margin-top: 1rem;
     font-family: var(--font-style1);
     color: var(--primary-color);
-  }
-  .card-text{
+}
+.card-text{
     color: var(--text-primary);
-  }
-  .card::before {
+}
+.card::before {
     content: '';
     position: absolute;
     width: 80px;
@@ -271,50 +261,91 @@ a.p-link:hover{
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
     border-radius: 15px;
-  }
-  
-  @keyframes rotBGimg {
+} 
+@keyframes rotBGimg {
     from {
       transform: rotate(0deg);
     }
-  
     to {
       transform: rotate(360deg);
     }
-  }
-  
-  .card::after {
+}
+.card::after {
     content: '';
     position: absolute;
     background: var(--card-color);
     inset: 5px;
     border-radius: 15px;
     z-index: 1;
-  }  
-  .card:hover:before {
+}  
+.card:hover:before {
     background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
     animation: rotBGimg 3.5s linear infinite;
-  }
-  /* Skill Section*/
-  .skill-title{
+}
+/* Skill Section*/
+.skill-title{
     color: var(--primary-color);
     font-family: var(--font-style1);
     font-size: 20px;
-  }
-  /*About Section*/
-  .about-h5{
+}
+.r-skills{
+ padding: 0 10% 0 10%;
+}
+/*About Section*/
+.about-h5{
     color: var(--primary-color);
     font-size: 1.25rem;
     margin-bottom: 0;
     opacity: .5;
-  }
-  .about-h1{
+}
+.about-h1{
     color: var(--primary-color);
     font-size: 52px;
     margin-bottom: 3%;
-  }
-  /*Footer Section*/
-  .f-container{
+}
+.ab-img{
+    width: 90%;
+}
+.about-p{
+    color: var(--text-primary);
+    font-family: var(--font-style2);
+    font-size: 20px;
+}
+.a-text{
+    font-size: 20px;
+}
+.about-p i{
+    color: var(--title-color);
+}
+.about-p span{
+    color: var(--primary-color);
+    font-weight: bolder;
+    font-family: var(--font-style);
+}
+/* CTA Section */
+.cta-title{
+    color: var(--primary-color);
+    font-family: var(--font-style1);
+    font-size: 52px;
+}
+.cta-p{
+    color: var(--text-primary);
+    font-family: var(--font-style2);
+    line-height: 35px;
+    font-size: 20px;
+}
+.cta-title, .cta-p{
+    margin-bottom: 2%;
+}
+.cta-buttons{
+    text-align: center;
+    font-family: var(--font-style2);
+}
+/*Footer Section*/
+.f-container{
     background: var(--title-color);
     color: var(--text-primary);
-  }
+}
+.f-container section{
+    padding: 3rem 0 3rem!important;
+}
