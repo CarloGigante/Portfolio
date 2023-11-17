@@ -18,7 +18,6 @@
 #navigation{
     background-color: var(--title-color);
     position: fixed;
-    padding: 10px;
     z-index: 1000; 
     width: 100%;
 }
@@ -75,8 +74,6 @@ p{
     left: 0;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .social-media {
     display: flex;
@@ -199,7 +196,7 @@ a.p-link:hover{
 }
 /* Certificate Section */
 .certi-img {
-    display: inline-flex;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     transition: all .5s ease;
@@ -222,12 +219,14 @@ a.p-link:hover{
 .c-img1, .c-img5,.c-img6, .c-img10{
     margin-top: 15%;
 }
+.cert2{
+    visibility: hidden;
+    position: fixed;
+}
 /*Service Section*/
 .card {
-    width: 22rem!important;
-    height: 26rem!important;
     background: var(--card-color)!important;
-    position: relative!important;
+    position:relative!important;
     display: flex!important;
     place-content: center!important;
     place-items: center!important;
@@ -346,6 +345,26 @@ a.p-link:hover{
     background: var(--title-color);
     color: var(--text-primary);
 }
-.f-container section{
-    padding: 3rem 0 3rem!important;
-}
+@media only screen and (max-width: 991px) {
+    .hero-buttons{
+        text-align: center;
+    }
+    .hero-btn-1, .hero-btn-r{
+        margin-bottom: 20px;
+    }
+    .side-panel{
+        visibility: hidden;
+        position:fixed;
+    }
+    .cert2{
+        visibility:unset;
+        position: relative;
+    }
+    .cert1{
+        visibility: hidden;
+        position: fixed;
+    }
+    .card{
+        margin-bottom: 25px;  
+    }
+} 
