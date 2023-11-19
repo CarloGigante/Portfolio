@@ -390,6 +390,9 @@ a.p-link:hover{
         visibility: hidden;
         position:fixed;
     }
+    .p-text-1, .p-text-2, .p-text-3 {
+        padding: 0 0% 0 0%;
+    }
     .cert2{
         visibility:unset;
         position: relative;
