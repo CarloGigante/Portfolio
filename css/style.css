@@ -136,7 +136,7 @@ p{
     color: var(--title-color)!important;
 }
 .picture{
-    max-width: 90%;
+    max-width: 75%;
 }
 .typing-text {
     border-right: 2px solid transparent;
