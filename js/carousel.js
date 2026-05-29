@@ -5,7 +5,7 @@ let autoSlideInterval = null;
 
 function updateCarousel() {
     if (track && totalSlides > 0) {
-        track.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 }
 
