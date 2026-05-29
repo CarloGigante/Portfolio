@@ -1,0 +1,44 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Lenis Smooth Scrolling Required CSS */
+html.lenis, html.lenis body {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+.gradient-overlay {
+    background: linear-gradient(to bottom, rgb(var(--color-background)) 0%, transparent 20%, transparent 80%, rgb(var(--color-background)) 100%);
+}
+
+html:not(.dark) body {
+    background-image:
+        radial-gradient(circle at 15% 50%, rgb(var(--color-primary) / 0.04), transparent 25%),
+        radial-gradient(circle at 85% 80%, rgb(var(--color-primary) / 0.04), transparent 25%),
+        linear-gradient(to right, rgb(var(--color-outline) / 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(var(--color-outline) / 0.05) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    background-attachment: fixed;
+}
+
+html.dark body {
+    background-image:
+        radial-gradient(circle at 15% 50%, rgb(var(--color-primary) / 0.05), transparent 25%),
+        radial-gradient(circle at 85% 80%, rgb(var(--color-primary) / 0.05), transparent 25%),
+        linear-gradient(to right, rgb(var(--color-outline) / 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(var(--color-outline) / 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    background-attachment: fixed;
+}

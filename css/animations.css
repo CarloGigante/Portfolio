@@ -1,0 +1,101 @@
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgb(var(--color-primary) / 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgb(var(--color-primary) / 0.4);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-neon-glow {
+    animation: neon-pulse 2s infinite alternate ease-in-out;
+    color: rgb(var(--color-on-surface));
+}
+
+@keyframes neon-pulse {
+    0% {
+        text-shadow:
+            0 0 5px rgb(var(--color-primary) / 0.2),
+            0 0 10px rgb(var(--color-primary) / 0.2);
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px rgb(var(--color-primary) / 0.8),
+            0 0 20px rgb(var(--color-primary) / 0.6),
+            0 0 30px rgb(var(--color-primary) / 0.4),
+            0 0 40px rgb(var(--color-primary) / 0.2);
+    }
+}
+
+#typing-text {
+    border-right: 3px solid rgb(var(--color-primary));
+    animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgb(var(--color-primary))
+    }
+}

@@ -1,0 +1,54 @@
+.certi-img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .5s ease;
+    width: 80%;
+    box-shadow: 0 0 1.1rem rgb(var(--color-on-surface) / 0.4);
+}
+
+.certi-img:hover {
+    position: relative;
+    z-index: 50;
+    transform: scale(2.7);
+}
+
+.certificate-img {
+    margin: 0 0 2% 2.5%;
+    flex: 0 0 auto;
+    width: 14%;
+}
+
+.c-img3,
+.c-img8 {
+    margin-top: 25%;
+}
+
+.c-img1,
+.c-img5,
+.c-img6,
+.c-img10 {
+    margin-top: 15%;
+}
+
+@media (max-width: 991px) {
+    .cert1 {
+        display: none !important;
+    }
+
+    .cert2 {
+        display: block !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .cert1 {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cert2 {
+        display: none !important;
+    }
+}
