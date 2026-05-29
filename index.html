@@ -269,10 +269,10 @@
                 <div class="flex justify-center gap-4 mt-6">
                     <button
                         class="bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-on-surface px-4 py-2 rounded-lg font-bold text-sm transition-transform hover:scale-105"
-                        onclick="prevSlide()">Prev</button>
+                        data-carousel="prev">Prev</button>
                     <button
                         class="bg-surface-container hover:bg-surface-container-high border border-outline-variant/30 text-on-surface px-4 py-2 rounded-lg font-bold text-sm transition-transform hover:scale-105"
-                        onclick="nextSlide()">Next</button>
+                        data-carousel="next">Next</button>
                 </div>
             </div>
         </section>
@@ -334,19 +334,19 @@
                         web development and network architecture, refined through continuous project iteration and
                         academic rigor.</p>
                     <div class="flex flex-wrap gap-3">
-                        <button onclick="animateSkill('bar-html', 85)"
+                        <button data-skill-bar="bar-html" data-skill-percent="85"
                             class="px-4 py-2 bg-surface-container-high border border-outline-variant/30 rounded font-label-sm text-label-sm text-on-surface hover:bg-primary hover:text-on-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary shadow-sm active:scale-95 cursor-pointer">HTML5</button>
-                        <button onclick="animateSkill('bar-css', 58)"
+                        <button data-skill-bar="bar-css" data-skill-percent="58"
                             class="px-4 py-2 bg-surface-container-high border border-outline-variant/30 rounded font-label-sm text-label-sm text-on-surface hover:bg-primary hover:text-on-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary shadow-sm active:scale-95 cursor-pointer">CSS</button>
-                        <button onclick="animateSkill('bar-bootstrap', 75)"
+                        <button data-skill-bar="bar-bootstrap" data-skill-percent="75"
                             class="px-4 py-2 bg-surface-container-high border border-outline-variant/30 rounded font-label-sm text-label-sm text-on-surface hover:bg-primary hover:text-on-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary shadow-sm active:scale-95 cursor-pointer">Bootstrap</button>
-                        <button onclick="animateSkill('bar-js', 55)"
+                        <button data-skill-bar="bar-js" data-skill-percent="55"
                             class="px-4 py-2 bg-surface-container-high border border-outline-variant/30 rounded font-label-sm text-label-sm text-on-surface hover:bg-primary hover:text-on-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary shadow-sm active:scale-95 cursor-pointer">JavaScript</button>
-                        <button onclick="animateSkill('bar-php', 50)"
+                        <button data-skill-bar="bar-php" data-skill-percent="50"
                             class="px-4 py-2 bg-surface-container-high border border-outline-variant/30 rounded font-label-sm text-label-sm text-on-surface hover:bg-primary hover:text-on-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary shadow-sm active:scale-95 cursor-pointer">PHP</button>
-                        <button onclick="animateSkill('bar-mysql', 60)"
+                        <button data-skill-bar="bar-mysql" data-skill-percent="60"
                             class="px-4 py-2 bg-surface-container-high border border-outline-variant/30 rounded font-label-sm text-label-sm text-on-surface hover:bg-primary hover:text-on-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary shadow-sm active:scale-95 cursor-pointer">MySQL</button>
-                        <button onclick="animateSkill('bar-cisco', 65)"
+                        <button data-skill-bar="bar-cisco" data-skill-percent="65"
                             class="px-4 py-2 bg-surface-container-high border border-outline-variant/30 rounded font-label-sm text-label-sm text-on-surface hover:bg-primary hover:text-on-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary shadow-sm active:scale-95 cursor-pointer">Cisco
                             Networking</button>
                     </div>
@@ -461,10 +461,10 @@
                 </div>
 
                 <!-- Navigation Buttons -->
-                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-background/80 hover:bg-primary text-on-surface hover:text-on-primary rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10 shadow-lg border border-outline-variant/30">
+                <button data-carousel="prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-background/80 hover:bg-primary text-on-surface hover:text-on-primary rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10 shadow-lg border border-outline-variant/30">
                     <span class="material-symbols-outlined">chevron_left</span>
                 </button>
-                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-background/80 hover:bg-primary text-on-surface hover:text-on-primary rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10 shadow-lg border border-outline-variant/30">
+                <button data-carousel="next" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-background/80 hover:bg-primary text-on-surface hover:text-on-primary rounded-full flex items-center justify-center backdrop-blur-md transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10 shadow-lg border border-outline-variant/30">
                     <span class="material-symbols-outlined">chevron_right</span>
                 </button>
             </div>
@@ -782,7 +782,7 @@
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
