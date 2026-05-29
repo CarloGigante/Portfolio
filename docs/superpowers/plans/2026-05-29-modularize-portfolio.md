@@ -30,6 +30,18 @@ For every verification step below, the server must be running and you load `http
 
 ---
 
+## Re-baseline note (2026-05-29, after Task 2)
+
+`index.html` was edited mid-execution (by the user). The line numbers quoted in Tasks 4 and 5 below were captured from an earlier snapshot and are now shifted. Authoritative current positions:
+
+- A NEW section `id="certificates"` ("Certifications", a second carousel) was added after the `id="skills"` section. It introduces a **second** `id="carousel-track"` (duplicate id — pre-existing bug, intentionally NOT fixed here) and a **second pair** of `prevSlide()/nextSlide()` buttons.
+- **Carousel inline handlers — now FOUR**, not two: `onclick="prevSlide()"` at lines 272 and 464; `onclick="nextSlide()"` at lines 275 and 467. Task 4 must rewire ALL FOUR to `data-carousel="prev"|"next"`. Current behavior (preserved): all four drive the first `#carousel-track`; the second carousel-track stays inert.
+- **Skill buttons** unchanged: 7 buttons at lines 337–351, same `animateSkill` mappings.
+- **Tail script tags:** Three.js CDN line 578; inline GLSL `<script>` lines 580–780 (content byte-identical to the original); Lenis CDN line 783; `<script src="./js/main.js">` line 785.
+- `js/main.js` is unchanged from the original 201-line version, so Task 3 is unaffected.
+
+---
+
 ## Task 1: Split `css/style.css` into partials
 
 **Files:**
